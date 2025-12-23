@@ -11,7 +11,7 @@ import { data, functions } from "./data.js";
 // console.log(data.pets);
 
 
-// 👉 code (from Chapter 9) ...
+// 👉 code (from Chapter 9 wiki) ...
 router.get("/api", async function (request, reply) {
   reply.send({ message: "hello" });
 });
