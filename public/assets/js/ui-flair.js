@@ -1,14 +1,21 @@
 // additional flair for the UI
 // https://tenor.com/view/flair-office-space-we-need-to-talk-about-your-flair-gif-16786213
 
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipInstance = new bootstrap.Tooltip(password);
+
 /**
  * Add mouseenter message
  */
 password.addEventListener("mouseenter", async function (event) {
-    displayInfo(`Click to copy your <i>${getSynonym()}</i> password!`);
+    // use bootstrap tooltip
+    tooltipInstance.setContent({ '.tooltip-inner': `Click to copy your ${getSynonym()} password!` });
+    // a custom message
+    // displayInfo(`Click to copy your <i>${getSynonym()}</i> password!`);
 });
 password.addEventListener("mouseleave", async function (event) {
-    displayInfo(``);
+    // displayInfo(``);
 });
 
 /**
@@ -17,9 +24,10 @@ password.addEventListener("mouseleave", async function (event) {
 password.addEventListener("click", async function (event) {
     try {
         await navigator.clipboard.writeText(this.value);
-        displayInfo("Bad password copied!");
+        tooltipInstance.setContent({ '.tooltip-inner': "Bad password copied!" });
+        // displayInfo("Bad password copied!");
     } catch (err) {
-        displayInfo("password failed to copy! " + err);
+        // displayInfo("password failed to copy! " + err);
     }
 });
 
@@ -47,9 +55,9 @@ function getSynonym() {
  * Get the correct indefinite article
  */
 function getArticle(str) {
-    if (/^[aeiou]$/i.test(str.charAt(0))) 
+    if (/^[aeiou]$/i.test(str.charAt(0)))
         return "an " + str;
-    else 
+    else
         return "a " + str;
 }
 let badSynonyms = `bad

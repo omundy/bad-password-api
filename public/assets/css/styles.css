@@ -204,3 +204,18 @@ code {
   border: none;
   margin: 0.4rem;
 }
+
+
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--button-hover);
+  --bs-tooltip-padding-x: 1rem;
+  --bs-tooltip-padding-y: .7rem;
+  --bs-tooltip-color: black;
+  --bs-tooltip-max-width: 400px;
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-font-size: 1rem;
+  --bs-tooltip-border-radius: 0.3rem;
+  --bs-tooltip-arrow-height: 1rem;
+  --bs-tooltip-arrow-width: 1rem;
+}
