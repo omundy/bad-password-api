@@ -6,7 +6,7 @@
 
 // import express, create router
 import express from 'express';
-var router = express.Router();
+const router = express.Router();
 
 // import data for the API
 import { data, functions } from "./data.js";
