@@ -104,11 +104,10 @@ function randomFromArray(arr) {
 
 
 
-/*************************************
- ************* EXTRA *****************
- *************************************/
+/********************************************************************
+ Alternate version sends data to server in the body of a POST request
+ ********************************************************************/
 
-// // This alternate version sends data to server in the body of a POST request
 // async function updatePasswordPost() {
 //     // store form data in an object to send to server
 //     let formData = {
@@ -122,7 +121,6 @@ function randomFromArray(arr) {
 //         // lowercase: lowercase.checked || false,
 //     }
 //     console.log(formData)
-
 //     // create options object to send data, options
 //     let options = {
 //         method: "POST",
@@ -131,7 +129,6 @@ function randomFromArray(arr) {
 //         },
 //         body: JSON.stringify(formData),
 //     }
-
 //     // request data
 //     await fetch('https://bad-password-api.glitch.me/api/custom', options)
 //         .then(response => response.json())
