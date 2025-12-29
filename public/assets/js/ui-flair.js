@@ -1,4 +1,4 @@
-// additional flair for the UI
+// additional flair for the UI (frontend)
 // https://tenor.com/view/flair-office-space-we-need-to-talk-about-your-flair-gif-16786213
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
