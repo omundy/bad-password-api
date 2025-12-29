@@ -142,12 +142,12 @@ button:active {
 }
 
 /* On mouse-over, add a grey background color */
-.custom-checkbox:hover input ~ .checkmark {
+.custom-checkbox:hover input~.checkmark {
   background-color: var(--shadow);
 }
 
 /* When the checkbox is checked, add a blue background */
-.custom-checkbox input:checked ~ .checkmark {
+.custom-checkbox input:checked~.checkmark {
   background-color: var(--button);
 }
 
@@ -162,8 +162,8 @@ button:active {
 .custom-checkbox .checkmark:after {
   left: 9px;
   top: 5px;
-  width: 5px;
-  height: 10px;
+  width: 8px;
+  height: 12px;
   border: solid var(--background);
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
@@ -172,7 +172,7 @@ button:active {
 }
 
 /* Show the checkmark when checked */
-.custom-checkbox input:checked ~ .checkmark:after {
+.custom-checkbox input:checked~.checkmark:after {
   display: block;
 }
 

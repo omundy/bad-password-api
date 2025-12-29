@@ -4,11 +4,13 @@
 
 // route.js - Add endpoints to the API
 
+// import express, create router
 import express from 'express';
 var router = express.Router();
+
 // import data for the API
 import { data, functions } from "./data.js";
-// console.log(data.pets);
+// console.log("data.pets", data.pets);
 
 
 // 👉 code (from Chapter 9 wiki) ...
@@ -22,6 +24,7 @@ router.get("/api/custom", async function (request, reply) {
   console.log(`params = ${request.query.params}`);
   reply.send({ message: returnPassword(request.query.params) });
 });
+// \code
 
 export default router;
 

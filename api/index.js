@@ -5,6 +5,7 @@
 // create express server
 import express from "express";
 const app = express();
+const port = 3000;
 
 // make all files inside /public available using static
 import path from "path";
@@ -22,7 +23,7 @@ import router from './routes.js';
 app.use('/', router);
 
 // start server
-app.listen(3000, () => console.log("Your app is listening at: http://localhost:3000."));
+app.listen(port, () => console.log(`Your app is listening at: http://localhost:${port}.`));
 
 // export app for vercel
 export default app;
