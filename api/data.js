@@ -35,16 +35,18 @@ const patterns = `abc,xyz,123,456,789,pass,111,000,321,007,ddd,lll`;
 
 
 
+// 👈
+
 
 
 // Export strings as arrays
 export const data = {
-  common: splitString(common),
-  pets: splitString(pets),
-  endearments: splitString(endearments),
-  patterns: splitString(patterns),
-  colors: splitString(colors),
-  cities: splitString(cities),
+	common: splitString(common),
+	pets: splitString(pets),
+	endearments: splitString(endearments),
+	patterns: splitString(patterns),
+	colors: splitString(colors),
+	cities: splitString(cities),
 };
 
 
@@ -55,20 +57,20 @@ export const data = {
 
 // split string to array on any non-alphanumeric character using \W (regular expression)
 function splitString(str) {
-  return str.trim().split(/\W+/);
+	return str.trim().split(/\W+/);
 }
 
 // Export functions
 export const functions = {
-  randomInt: (min = 0, max = 1) =>
-    Math.floor(Math.random() * (max - min + 1)) + min,
-  randomFromArray: (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)];
-  },
-  randomYear: () => {
-    let currentYear = new Date().getFullYear();
-    let year = `${functions.randomInt(currentYear - 90, currentYear)}`;
-    if (Math.random() < 0.5) year = year.slice(2);
-    return year;
-  },
+	randomInt: (min = 0, max = 1) =>
+		Math.floor(Math.random() * (max - min + 1)) + min,
+	randomFromArray: (arr) => {
+		return arr[Math.floor(Math.random() * arr.length)];
+	},
+	randomYear: () => {
+		let currentYear = new Date().getFullYear();
+		let year = `${functions.randomInt(currentYear - 90, currentYear)}`;
+		if (Math.random() < 0.5) year = year.slice(2);
+		return year;
+	},
 };

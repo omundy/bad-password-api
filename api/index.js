@@ -14,7 +14,7 @@ const __filename = new URL("", import.meta.url).pathname;
 const __dirname = new URL(".", import.meta.url).pathname;
 app.use(express.static(path.join(__dirname, '../public')));
 
-// allow access to all 
+// allow access to all domains
 import cors from 'cors';
 app.use(cors());
 
