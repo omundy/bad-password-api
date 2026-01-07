@@ -1,22 +1,5 @@
 // main.js - client-side code to connect to the bad password API
 
-//////////////////////////////////////
-/////////////// INIT /////////////////
-//////////////////////////////////////
-
-// base url for 10.3
-let baseurl = "https://bad-password-api.vercel.app";
-
-// ⚠️ base url for localhost testing
-// baseurl = "http://localhost:3000";
-// ⚠️ 
-
-// 👉 update base url to pull from your own database (Chapter 9 wiki) ...
-baseurl = "";
-// 👈
-
-
-
 // REFERENCES
 let password = document.querySelector("#password");
 let button = document.querySelector("#submit");
@@ -41,9 +24,11 @@ async function updatePassword() {
     let group1 = document.querySelector("input[name=group1]:checked");
     let group2 = document.querySelector("input[name=group2]:checked");
 
-    // append options to the end of api
-    let url = baseurl + "/api/custom?params=" + group1.value + "," + group2.value;
-    // console.log(url);
+    // append options to the end of url - 10.3
+    // let url = "https://bad-password-api.vercel.app/api/custom?params=" + group1.value + "," + group2.value;
+
+    // append options to the end of url - 10.4
+    let url = "/api/custom?params=" + group1.value + "," + group2.value;
 
     // send fetch request
     await fetch(url)
