@@ -15,6 +15,7 @@ A password generator that outputs only terrible, regrettable, unacceptable, drea
 - Or, follow instructions at the link above to connect to the API from your own app.
 
 
+![screenshot](public/assets/img/09-24-bad-password-api-finished-1.png)
 
 
 ## About
